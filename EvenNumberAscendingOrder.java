@@ -7,6 +7,5 @@ public class EvenNumberAscendingOrder{
        System.out.println(i);
          }
       }
-   }
-       
+   }       
 }     
