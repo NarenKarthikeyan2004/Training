@@ -1,10 +1,24 @@
-class ReverseNumber{
-  public static void main(String[] args) {
-    int num = 123456789, reversed = 0;
-    for(;num != 0; num /= 10) {
-      int digit = num % 10;
-      reversed = reversed * 10 + digit;
+class ReverseNumber {
+    public static void main (String[] args) {
+        String s="I love Java     Programming";
+        int n=s.length()-1;
+        String str="";
+        for(int i=n;i>=0;i--) {
+            if(Character.isLetter(s.charAt(i))){
+                str=str+s.charAt(i);
+                if(i==0){
+                StringBuilder sb=new StringBuilder(str);
+                System.out.print(sb.reverse());
+                }
+            }
+            else if(s.charAt(i)==' '){
+                if(str=="") {
+                    continue;
+                }
+                StringBuilder sb=new StringBuilder(str);
+                System.out.print(sb.reverse()+" ");
+                str="";
+            }
+        }
     }
-    System.out.println("Reversed Number: " + reversed);
-  }
 }
